@@ -16,3 +16,13 @@ const newArray = array.map(item => {
 })
 
 console.log(newArray.sort((a, b) => a - b));
+
+
+// Funkcja wypisze tylko parzyste liczby
+const array = [2, 5, 7, 10, 34, 16, 879, 1];
+
+const write = (numbers) => {
+  return numbers.filter(item=> (item % 2 === 0) ? item : null );
+}
+
+console.log(write(array));
