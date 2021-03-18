@@ -26,3 +26,18 @@ const write = (numbers) => {
 }
 
 console.log(write(array));
+
+//Redux funkcja reducer usuwanie z tablicy elementu o wskazanym id
+export const todosReducer = (state = initialState, action) => {
+    switch(action.type) {
+        case 'DELETE':
+            return {
+                ...state,
+                todos: state.todos.filter((item, index) => (item.id === action.paylod) ? false : true)
+            }
+        case 'ADD':
+            return state;
+        default:
+            return state;   
+    }
+}
